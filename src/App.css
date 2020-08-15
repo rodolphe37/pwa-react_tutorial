@@ -1,9 +1,26 @@
 html, body, #root {
-  font: 0.9rem sans-serif;
+  font: 1rem sans-serif;
   background: #0a1f44;
   color: #1e2432;
   height: 100%;
   margin: 0;
+}
+
+.min-max {
+  display: flex;
+  text-align: center;
+}
+
+.temp-min {
+  color: blue;
+}
+
+.temp-max {
+  color:red
+}
+
+.temp-min {
+  margin-right: 15px;
 }
 
 .city-feels-like-temp, .city-feels-humidity, .city-pressure, .weather-deg-wind, .weather-speed-wind {
@@ -11,7 +28,7 @@ html, body, #root {
 }
 
 .main-container {
-  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url('https://i.imgur.com/5E4yhkj.jpg');
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url('https://i.imgur.com/wRkDzSk.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -40,7 +57,7 @@ html, body, #root {
   flex-direction: column;
   padding: 40px 8%;
   border-radius: 20px;
-  background: rgba(250, 250, 250, 0.85);
+  background: rgba(236, 232, 232, 0.85);
   box-shadow: 10px 10px 5px 0px rgba(15, 15, 15, 0.404);
 }
 
