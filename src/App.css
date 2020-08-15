@@ -6,7 +6,7 @@ html, body, #root {
   margin: 0;
 }
 
-.city-feels-humidity, .weather-deg-wind, .weather-speed-wind {
+.city-feels-like-temp, .city-feels-humidity, .city-pressure, .weather-deg-wind, .weather-speed-wind {
   text-align: center;
 }
 

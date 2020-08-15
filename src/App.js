@@ -28,21 +28,37 @@ const App = () => {
             {Math.round(weather.main.temp)}
             <sup>&deg;C</sup>
           </div>
+          <br />
+          <div className="city-feels-like-temp">
+            <b>Température ressentie</b><br />
+            {Math.round(weather.main.feels_like)}
+            <sup>&deg;C</sup>
+          </div>
+          <br />
           <div className="city-feels-humidity">
             <b>Humidité</b><br />
             {weather.main.humidity}
             <sup>%</sup>
           </div>
+          <br />
+          <div className="city-pressure">
+            <b>Pression atmosphérique</b><br />
+            {weather.main.pressure}
+            <sup>hPa</sup>
+          </div>
+          <br />
           <div className="weather-deg-wind">
             <b>Direction du vent</b><br />
             <span>{weather.wind.deg}</span>
             <sup>&deg;</sup>
           </div>
+          <br />
           <div className="weather-speed-wind">
             <b>Vitesse du vent</b><br />
             <span>{weather.wind.speed}</span>
             <sup> Km/h</sup>
           </div>
+          <br />
           <div className="info">
             <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
           </div>
