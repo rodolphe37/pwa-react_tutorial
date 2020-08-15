@@ -16,26 +16,31 @@ const App = () => {
   }
 
   const TradDescriptionsWeather = () => {
-    if (weather.weather[0].description === 'few clouds') {
+    if (weather.weather[0].description === 'few clouds')
       return 'Quelques Nuages'
-    }
-    if (weather.weather[0].description === 'mist') {
+
+    if (weather.weather[0].description === 'mist')
       return 'Brouillard'
-    }
-    if (weather.weather[0].description === 'clear sky') {
+
+    if (weather.weather[0].description === 'clear sky')
       return 'Ciel clair'
-    }
-    if (weather.weather[0].description === 'scattered clouds') {
+
+    if (weather.weather[0].description === 'scattered clouds')
       return 'Nuages dispersés'
-    }
-    if (weather.weather[0].description === 'overcast clouds') {
+
+    if (weather.weather[0].description === 'overcast clouds')
       return 'Ciel Couvert'
-    }
-    if (weather.weather[0].description === 'light rain') {
+
+    if (weather.weather[0].description === 'light rain')
       return 'Légère pluie'
-    }
+
     if (weather.weather[0].description === 'moderate rain')
       return 'Pluie modérée'
+
+    if (weather.weather[0].description === 'broken clouds')
+      return 'Nuageux'
+
+    else return weather.weather[0].description
   }
 
   return (
