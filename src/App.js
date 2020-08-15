@@ -94,12 +94,12 @@ const App = () => {
           <div className="min-max">
             <div className="temp-min">
               <b>Temp min</b><br />
-              {Math.round(weather.main.temp_min)}
+              {weather.main.temp_min}
               <sup>&deg;C</sup>
             </div>
             <div className="temp-max">
               <b>Temp max</b><br />
-              {Math.round(weather.main.temp_max)}
+              {weather.main.temp_max}
               <sup>&deg;C</sup>
             </div>
           </div>
