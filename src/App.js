@@ -75,22 +75,12 @@ const App = () => {
             <sup>hPa</sup>
           </div>
           <br />
-          <div className="weather-deg-wind">
-            <b>Direction du vent</b><br />
-            <span>{weather.wind.deg}</span>
-            <sup>&deg;</sup>
-          </div>
-          <br />
           <div className="weather-speed-wind">
             <b>Vitesse du vent</b><br />
             <span>{weather.wind.speed}</span>
             <sup> Km/h</sup>
           </div>
           <br />
-          <div className="info">
-            <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
-            <p>{TradDescriptionsWeather()}</p>
-          </div>
           <div className="min-max">
             <div className="temp-min">
               <b>Temp min</b><br />
@@ -102,6 +92,10 @@ const App = () => {
               {weather.main.temp_max}
               <sup>&deg;C</sup>
             </div>
+          </div>
+          <div className="info">
+            <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
+            <p>{TradDescriptionsWeather()}</p>
           </div>
         </div>
       )}

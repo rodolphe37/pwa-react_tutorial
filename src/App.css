@@ -28,6 +28,7 @@ html, body, #root {
   background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url('https://i.imgur.com/wRkDzSk.jpg');
   background-size: cover;
   background-position: center;
+  /* min-height: 120%; */
 }
 
 .main-container {
@@ -103,9 +104,15 @@ p {
 @media only screen and (max-width: 600px) {
   .search {
       padding: 20px 15%;
+      margin-top: -85px;
   }
 
   .city {
       padding: 40px 20%;
   }
+
+  .main-container {
+    min-height: 140%;
+  }
+
 }
