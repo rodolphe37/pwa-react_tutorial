@@ -6,6 +6,10 @@ html, body, #root {
   margin: 0;
 }
 
+.city-feels-humidity, .weather-deg-wind, .weather-speed-wind {
+  text-align: center;
+}
+
 .main-container {
   background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url('https://i.imgur.com/5E4yhkj.jpg');
   background-size: cover;

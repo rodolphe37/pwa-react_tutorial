@@ -29,18 +29,17 @@ const App = () => {
             <sup>&deg;C</sup>
           </div>
           <div className="city-feels-humidity">
-            <p>Humidité</p>
+            <b>Humidité</b><br />
             {weather.main.humidity}
             <sup>%</sup>
           </div>
-          <div className="weather-desc">
-            <span>{weather.weather[0].description}</span>
-          </div>
           <div className="weather-deg-wind">
+            <b>Direction du vent</b><br />
             <span>{weather.wind.deg}</span>
             <sup>&deg;</sup>
           </div>
           <div className="weather-speed-wind">
+            <b>Vitesse du vent</b><br />
             <span>{weather.wind.speed}</span>
             <sup> Km/h</sup>
           </div>
