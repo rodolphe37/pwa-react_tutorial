@@ -15,6 +15,29 @@ const App = () => {
     }
   }
 
+  const TradDescriptionsWeather = () => {
+    if (weather.weather[0].description === 'few clouds') {
+      return 'Quelques Nuages'
+    }
+    if (weather.weather[0].description === 'mist') {
+      return 'Brouillard'
+    }
+    if (weather.weather[0].description === 'clear sky') {
+      return 'Ciel clair'
+    }
+    if (weather.weather[0].description === 'scattered clouds') {
+      return 'Nuages dispersés'
+    }
+    if (weather.weather[0].description === 'overcast clouds') {
+      return 'Ciel Couvert'
+    }
+    if (weather.weather[0].description === 'light rain') {
+      return 'Légère pluie'
+    }
+    if (weather.weather[0].description === 'moderate rain')
+      return 'Pluie modérée'
+  }
+
   return (
     <div className="main-container">
       <input type="text" className="search" placeholder="Search ..." value={query} onChange={(e) => setQuery(e.target.value)} onKeyPress={search} />
@@ -61,6 +84,7 @@ const App = () => {
           <br />
           <div className="info">
             <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
+            <p>{TradDescriptionsWeather()}</p>
           </div>
         </div>
       )}
