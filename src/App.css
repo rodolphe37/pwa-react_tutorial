@@ -1,9 +1,26 @@
 html, body, #root {
-  font: 0.9rem sans-serif;
+  font: 1rem sans-serif;
   background: #0a1f44;
   color: #1e2432;
   height: 100%;
   margin: 0;
+}
+
+.min-max {
+  display: flex;
+  text-align: center;
+}
+
+.temp-min {
+  color: blue;
+}
+
+.temp-max {
+  color:red
+}
+
+.temp-min {
+  margin-right: 15px;
 }
 
 .city-feels-like-temp, .city-feels-humidity, .city-pressure, .weather-deg-wind, .weather-speed-wind {

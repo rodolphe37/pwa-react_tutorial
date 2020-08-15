@@ -1,0 +1,25 @@
+{
+  "short_name": "Application Météo en temps réel",
+  "name": "PWA Météo en temps réel",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "type": "images/png",
+      "sizes": "1024x1024"
+    },
+    {
+      "src": "/images/logo512.png",
+      "type": "images/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/logo.png",
+      "type": "images/png",
+      "sizes": "144x144"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
