@@ -20,10 +20,6 @@ html, body, #root {
   color:red
 }
 
-/* .temp-min {
-  margin-right: 15px;
-} */
-
 .city-feels-like-temp, .city-feels-humidity, .city-pressure, .weather-deg-wind, .weather-speed-wind {
   text-align: center;
 }
