@@ -6,8 +6,12 @@ html, body, #root {
   margin: 0;
 }
 
+.city-feels-like-temp, .city-feels-humidity, .city-pressure, .weather-deg-wind, .weather-speed-wind {
+  text-align: center;
+}
+
 .main-container {
-  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url('https://hdwallpaper20.com/wp-content/uploads/2017/07/wallpaper-wp4001752.jpg');
+  background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.418) ), url('https://i.imgur.com/5E4yhkj.jpg');
   background-size: cover;
   background-position: center;
 }

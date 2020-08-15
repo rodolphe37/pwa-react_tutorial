@@ -4,25 +4,90 @@ import './App.css';
 
 const App = () => {
   const [query, setQuery] = useState('')
+  const [weather, setWeather] = useState({})
 
   const search = async (e) => {
     if (e.key === 'Enter') {
       const data = await fetchWeather(query)
-
       console.log(data)
+      setWeather(data)
+      setQuery('')
     }
+  }
+
+  const TradDescriptionsWeather = () => {
+    if (weather.weather[0].description === 'few clouds') {
+      return 'Quelques Nuages'
+    }
+    if (weather.weather[0].description === 'mist') {
+      return 'Brouillard'
+    }
+    if (weather.weather[0].description === 'clear sky') {
+      return 'Ciel clair'
+    }
+    if (weather.weather[0].description === 'scattered clouds') {
+      return 'Nuages dispersés'
+    }
+    if (weather.weather[0].description === 'overcast clouds') {
+      return 'Ciel Couvert'
+    }
+    if (weather.weather[0].description === 'light rain') {
+      return 'Légère pluie'
+    }
+    if (weather.weather[0].description === 'moderate rain')
+      return 'Pluie modérée'
   }
 
   return (
     <div className="main-container">
-      <input
-        type="text"
-        className="search"
-        placeholder="Search ..."
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        onKeyPress={search}
-      />
+      <input type="text" className="search" placeholder="Search ..." value={query} onChange={(e) => setQuery(e.target.value)} onKeyPress={search} />
+      {weather.main && (
+        <div className="city">
+          <h2 className="city-name">
+            <span>{weather.name}</span>
+            <sup>{weather.sys.country}</sup>
+          </h2>
+          <div className="city-temp">
+            {Math.round(weather.main.temp)}
+            <sup>&deg;C</sup>
+          </div>
+          <br />
+          <div className="city-feels-like-temp">
+            <b>Température ressentie</b><br />
+            {Math.round(weather.main.feels_like)}
+            <sup>&deg;C</sup>
+          </div>
+          <br />
+          <div className="city-feels-humidity">
+            <b>Humidité</b><br />
+            {weather.main.humidity}
+            <sup>%</sup>
+          </div>
+          <br />
+          <div className="city-pressure">
+            <b>Pression atmosphérique</b><br />
+            {weather.main.pressure}
+            <sup>hPa</sup>
+          </div>
+          <br />
+          <div className="weather-deg-wind">
+            <b>Direction du vent</b><br />
+            <span>{weather.wind.deg}</span>
+            <sup>&deg;</sup>
+          </div>
+          <br />
+          <div className="weather-speed-wind">
+            <b>Vitesse du vent</b><br />
+            <span>{weather.wind.speed}</span>
+            <sup> Km/h</sup>
+          </div>
+          <br />
+          <div className="info">
+            <img className="city-icon" src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} alt={weather.weather[0].description} />
+            <p>{TradDescriptionsWeather()}</p>
+          </div>
+        </div>
+      )}
     </div>
   )
 
