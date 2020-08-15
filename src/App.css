@@ -104,7 +104,7 @@ p {
 @media only screen and (max-width: 600px) {
   .search {
       padding: 20px 15%;
-      margin-top: -85px;
+      margin-top: -12%;
   }
 
   .city {
@@ -112,7 +112,7 @@ p {
   }
 
   .main-container {
-    min-height: 140%;
+    min-height: 130%;
   }
 
 }

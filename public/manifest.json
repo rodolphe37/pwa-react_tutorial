@@ -3,18 +3,24 @@
   "name": "PWA Météo en temps réel",
   "icons": [
     {
-      "src": "/images/logo.png",
-      "type": "images/png",
+      "src": "images/logo.png",
+      "type": "image/png",
       "sizes": "1024x1024"
     },
     {
-      "src": "/images/logo512.png",
-      "type": "images/png",
+      "src": "images/logo512.png",
+      "type": "image/png",
       "sizes": "512x512"
     },
     {
-      "src": "/images/logo.png",
-      "type": "images/png",
+      "src": "images/logo.png",
+      "sizes": "196x196",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/logo144.png",
+      "type": "image/png",
       "sizes": "144x144"
     }
   ],
